@@ -1,0 +1,405 @@
+@charset "UTF-8";
+
+:root {
+  --cor0: #eaeaea;
+  --cor1: #000000;
+  --cor2: #ffffff;
+  --cor3: #ccc;
+}
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background: var(--cor0);
+    padding: 20px;
+  }
+
+  
+input:hover {
+    border-color: rgba(0, 0, 0, 0.849);
+  }
+
+.top-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1.2em;
+  }
+  
+.info-block {
+    background: var(--cor2);
+    border: 3px solid var(--cor1);
+    padding: 10px;
+    width: 400px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+.info-block h1 {
+    background: var(--cor1);
+    color: var(--cor2);
+    text-align: center;
+    font-size: 1.2em;
+    margin: -10px -10px 10px -10px;
+    padding: 5px;
+  }
+  
+.info-field {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+.info-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+.info-field label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+.info-field input {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+.info-row .info-field:nth-child(1) input {
+    width: 95%;
+  }
+  
+select {
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #6E6E6E;
+    width: 100%;
+    background-color: var(--cor2);
+  }
+
+.info-row .info-field:nth-child(2) select {
+    width: 170px;
+    max-width: 180px; 
+  }
+  
+abbr {
+    text-decoration: none;
+    border-bottom: .1em dotted var(--cor1);
+    cursor: help; 
+  }
+
+.attributes-block {
+    background: var(--cor0);
+    border: 3px solid var(--cor1);
+    border-radius: 5px;
+    width: 700px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+.attributes-block h2 {
+    background: var(--cor3);
+    color: var(--cor1);
+    text-align: center;
+    padding: 5px;
+    margin: -10px -10px 10px -10px;
+    font-size: 1.2em;
+  }
+  
+.attribute-columns {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+.attr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--cor2);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 1px #0000006e;
+  }
+  
+.attr label {
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  
+.attr input.main {
+    width: 50%;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+.mov-center {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.mov-center input.main {
+    font-size: 1.2em;
+    padding: 4px;
+    height: 50px;
+  }
+  
+#mov-container {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+
+.attr input.mini {
+    width: 48%;
+    padding: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Contêiner geral dos blocos de status (HP, Sanidade, Sorte, PM) */
+.status-block {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha, ex: sorte e magia ficarem embaixo */
+  gap: 10px; /* espaçamento entre os blocos */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Cada mini-bloco (HP, Sanidade, etc) */
+.status-section {
+  background: var(--cor2);
+  border: 2px solid var(--cor1);
+  padding: 10px;
+  border-radius: 6px;
+  flex: 1 1 180px; /* flexível, mas mínimo de ~180px */
+  min-width: 160px;
+}
+
+.status-section h3 {
+  background: var(--cor3);
+  text-align: center;
+  font-size: 1.4rem;
+  margin: -10px -10px 10px -10px;
+  padding: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+label input[type="checkbox"] {
+  margin-left: 5px;
+  vertical-align: middle;
+  accent-color: var(--cor1);
+  cursor: pointer;
+}
+
+.hp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.major-wound-box {
+  margin-right: 10px;
+}
+
+.major-wound-box label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hpmax-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hp-meta label,
+.hp-track label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Centraliza o input de PV Máximo */
+.hp-meta input {
+  text-align: center;
+  border-radius: 4px;
+  width: auto;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* Caixa de HP Atual */
+.hp-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.hp-track input {
+  padding: 10px;
+  width: auto;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/*Sanidade*/
+.sanity-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.sanity-meta-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.sanity-meta-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sanity-meta label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.start-sanity-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.max-sanity-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.max-sanity-box input {
+  padding: 10px;
+  width: auto;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.sanity-meta-number input {
+  text-align: center;
+  border-radius: 4px;
+  width: auto;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* Alinhamento customizado entre checkboxes e valores */
+.sanity-meta input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+
+.sanity-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sanity-track label {
+  margin-bottom: 5px;
+}
+
+.insanity-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.sanity-track input {
+  padding: 10px;
+  width: auto;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.sanity-track label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/*Sorte & PM*/
+.luck-track,
+.magic-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* <- centraliza tudo horizontalmente */
+  gap: 10px;
+}
+
+.luck-box,
+.magic-box {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.luck-box label,
+.magic-box label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.luck-box input[type="number"],
+.magic-box input[type="number"] {
+  padding: 10px;
+  width: auto;
+  text-align: center;
+  border-radius: 4px;
+}

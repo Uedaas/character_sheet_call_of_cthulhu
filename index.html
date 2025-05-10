@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Editável Call Of Cthulhu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-container">
+        <section class="info-block">
+          <h1>Década de 1920</h1>
+          <div class="info-field">
+            <label>Nome:</label><input type="text">
+          </div>
+          <div class="info-row">
+            <div class="info-field">
+              <label>Jogador(a):</label><input type="text">
+            </div>
+            <div class="info-field">
+              <label>Sexo:</label>
+              <select name="sexo">
+                <option value="">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+                <option value="prefiro_nao_informar">Prefiro não informar</option>
+              </select>
+            </div>
+          </div>
+          <div class="info-field">
+            <label>Ocupação:</label><input type="text">
+          </div>
+            <div class="info-field">
+              <label>Idade:</label><input type="number">
+            </div>
+            <div class="info-field">
+              <label>Residência:</label><input type="text">
+            </div>
+          <div class="info-field">
+            <label>Nascimento:</label><input type="date">
+          </div>
+        </section>
+        <section class="attributes-block">
+          <h2>Características</h2>
+          <div class="attribute-columns">
+            <div class="column">
+              <div class="attr">
+                <label><abbr title="A pontuação de força determina a força física do seu personagem. Uma pontuação alta em força pode resultar em um bônus de dano em combate corpo a corpo. A força é determinada rolando 3D6 e multiplique por 5 e você terá sua característica de força.">FOR</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+              <div class="attr">
+                <label><abbr title="A pontuação de constituição determina sua saúde geral e resistência a doenças ou venenos. Sua pontuação de constituição também afeta a quantidade de pontos de vida do seu personagem. Role 3D6 e multiplique por 5 para obter sua característica de constituição.">CON</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+              <div class="attr">
+                <label><abbr title="Sua pontuação de tamanho é uma representação da sua altura e peso. O tamanho impactará seus pontos de vida e possível bônus de dano. Para sua característica de tamanho, você rola 2D6+6 e multiplica o valor por 5.">TAM</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+            </div>
+            <div class="column">
+              <div class="attr">
+                <label><abbr title="Destreza é a sua agilidade e destreza . Quanto maior for o seu valor de destreza, mais rápido você poderá agir durante o combate. Role 3D6 e multiplique por 5 para obter sua característica de destreza.">DES</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+              <div class="attr">
+                <label><abbr title="Sua característica de aparência não se resume apenas à sua aparência. Ela também inclui sua personalidade. Para sua característica de aparência, você rola 3D6 e multiplique por 5 para obter seu resultado.">APA</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+              <div class="attr">
+                <label><abbr title="Inteligência representa sua memória e habilidades analíticas. Sua pontuação de inteligência é usada para determinar o número de pontos de habilidade disponíveis para seus interesses pessoais. Seu valor também é igual à sua pontuação de Ideia. Para determinar sua característica de inteligência, role 2D6+6 e multiplique por 5.">INT</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+            </div>
+            <div class="column">
+              <div class="attr">
+                <label><abbr title="O poder é usado para determinar sua força de vontade. Sua característica de poder também é igual à sua pontuação de sanidade. Além disso, é útil para lançar ou resistir a feitiços mágicos. Sua característica de poder é obtida rolando 3D6 e multiplicando por 5.">POD</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+              <div class="attr">
+                <label><abbr title="A educação mede sua educação formal. Ela difere da inteligência, pois determina seu conhecimento factual, enquanto a inteligência governa o uso desse conhecimento. Sua pontuação de educação é usada para determinar seus pontos de perícia ocupacional e sua pontuação de conhecimento. Jogue 2D6+6 e multiplique por 5 para obter sua característica de educação.">EDU</abbr></label>
+                <input class="main" placeholder="50">
+                <input class="mini" placeholder="25">
+                <input class="mini" placeholder="10">
+              </div>
+              <div class="attr" id="mov-container">
+                <label><abbr title="Sua taxa de movimento determina quantos metros ou jardas você pode se mover em uma única rodada.">MOV</abbr></label>
+                <div class="mov-center">
+                    <input class="main" placeholder="8">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="status-block">
+        <div class="status-section hp">
+          <h3>Pontos de Vida</h3>
+          <div class="hp-meta">
+            <div class="major-wound-box">
+              <label>Lesão Grave<input type="checkbox"></label>
+            </div>
+            <div class="hpmax-box">
+              <label>PV Máx:</label><input type="number" placeholder="PV Máximo">
+            </div>
+          </div>
+          <div class="hp-track">
+            <label>HP Atual:</label><input type="number" placeholder="Atual">
+          </div>
+        </div>
+        <div class="status-section sanity">
+          <h3>Sanidade</h3>
+          <div class="sanity-meta">
+            <div class="sanity-meta-checkbox">
+              <label>Insanidade Temp.<input type="checkbox"></label>
+              <label>Insanidade Indef.<input type="checkbox"></label>
+            </div>
+            <div class="sanity-meta-number">
+              <div class="start-sanity-box">
+                <label>Inicial:</label><input type="number" placeholder="Inicial">
+              </div>
+              <div class="max-sanity-box">
+                <label>Máx:</label><input type="number" value="99" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="sanity-track">
+            <div class="insanity-track">
+              <label>Sanidade Atual:</label><input type="number" placeholder="Atual">
+            </div>
+            <label>Insano<input type="checkbox"></label>
+          </div>
+        </div>
+        <div class="status-section luck">
+          <h3>Sorte</h3>
+          <div class="luck-track">
+            <div class="luck-box">
+              <label>Sem Sorte<input type="checkbox"></label>
+            </div>
+            <div class="luck-box">
+            <label>Atual:</label><input type="number" placeholder="Atual">
+            </div>
+          </div>
+        </div>
+        <div class="status-section magic">
+          <h3>Pontos de Magia</h3>
+          <div class="magic-track">
+            <div class="magic-box">
+              <label>PM Máx:</label><input type="number" placeholder="PM Máximo">
+            </div>
+            <div class="magic-box">
+              <label>Atual:</label><input type="number" placeholder="PM Atual">
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
